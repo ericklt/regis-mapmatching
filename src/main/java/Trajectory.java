@@ -1,6 +1,5 @@
 
-import com.bmwcarit.barefoot.matcher.MatcherSample;
-import com.esri.core.geometry.Point;
+import com.graphhopper.util.GPXEntry;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,15 +8,15 @@ public class Trajectory {
 
     private int id;
     private int taxiId;
-    private List<MatcherSample> samples = new ArrayList<>();
+    private List<GPXEntry> points = new ArrayList<>();
 
     public Trajectory(int id, int taxiId) {
         this.id = id;
         this.taxiId = taxiId;
     }
 
-    public void addSample(double lat, double lng, long timestamp) {
-        samples.add(new MatcherSample(timestamp, new Point(lat, lng)));
+    public void addPoint(double lat, double lng, long timestamp) {
+        points.add(new GPXEntry(lat, lng, timestamp));
     }
 
     public int getId() {
@@ -28,7 +27,7 @@ public class Trajectory {
         return taxiId;
     }
 
-    public List<MatcherSample> getSamples() {
-        return samples;
+    public List<GPXEntry> getPoints() {
+        return points;
     }
 }

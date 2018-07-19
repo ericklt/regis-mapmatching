@@ -15,10 +15,11 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.bmw-carit</groupId>
-            <artifactId>barefoot</artifactId>
-            <version>0.1.4</version>
+            <groupId>com.graphhopper</groupId>
+            <artifactId>graphhopper-map-matching-core</artifactId>
+            <version>0.9.0</version>
         </dependency>
+
 
 
 

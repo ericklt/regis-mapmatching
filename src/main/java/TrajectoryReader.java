@@ -33,7 +33,7 @@ public class TrajectoryReader {
                     trajectories.add(t);
                     t = new Trajectory(id, taxiId);
                 }
-                t.addSample(lat, lng, timestamp);
+                t.addPoint(lat, lng, timestamp);
                 currentId = id;
             }
             trajectories.add(t);
